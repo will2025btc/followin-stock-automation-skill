@@ -1,0 +1,4 @@
+interface:
+  display_name: "Followin Stock Automation"
+  short_description: "Create Followin MCP stock watchlist automations"
+  default_prompt: "Use Followin MCP to create a daily premarket automation for my watchlist and holdings."
