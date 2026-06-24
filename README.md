@@ -25,13 +25,21 @@ git clone https://github.com/will2025btc/followin-stock-automation-skill.git \
 
 这个 skill 依赖 Followin MCP。没有 Followin MCP 时，Agent 不应该假装拿到了 Followin 数据。
 
+Followin 官方 MCP 页面：[https://followin.io/zh-Hans/mcp](https://followin.io/zh-Hans/mcp)
+
+下面使用推荐的 Streamable HTTP 端点：
+
+```text
+https://mcp.followin.io/v2/mcp
+```
+
 ### Codex
 
 在 `~/.codex/config.toml` 里加入：
 
 ```toml
 [mcp_servers.followin]
-url = "https://mcp.followin.io/v2/sse"
+url = "https://mcp.followin.io/v2/mcp"
 env_http_headers = { "x-api-key" = "FOLLOWIN_MCP_TOKEN" }
 ```
 
@@ -45,7 +53,7 @@ export FOLLOWIN_MCP_TOKEN="YOUR_API_KEY_HERE"
 
 ```toml
 [mcp_servers.followin]
-url = "https://mcp.followin.io/v2/sse"
+url = "https://mcp.followin.io/v2/mcp"
 http_headers = { "x-api-key" = "YOUR_API_KEY_HERE" }
 ```
 
@@ -54,9 +62,9 @@ http_headers = { "x-api-key" = "YOUR_API_KEY_HERE" }
 可以直接运行：
 
 ```bash
-claude mcp add followin https://mcp.followin.io/v2/sse \
+claude mcp add followin https://mcp.followin.io/v2/mcp \
   --scope user \
-  --transport sse \
+  --transport http \
   --header "x-api-key: YOUR_API_KEY_HERE"
 ```
 

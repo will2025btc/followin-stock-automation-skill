@@ -21,7 +21,7 @@ Expected configuration:
 
 ```toml
 [mcp_servers.followin]
-url = "https://mcp.followin.io/v2/sse"
+url = "https://mcp.followin.io/v2/mcp"
 env_http_headers = { "x-api-key" = "FOLLOWIN_MCP_TOKEN" }
 ```
 
@@ -29,7 +29,7 @@ Alternative simple configuration, if the user accepts storing the key in config:
 
 ```toml
 [mcp_servers.followin]
-url = "https://mcp.followin.io/v2/sse"
+url = "https://mcp.followin.io/v2/mcp"
 http_headers = { "x-api-key" = "YOUR_API_KEY_HERE" }
 ```
 
