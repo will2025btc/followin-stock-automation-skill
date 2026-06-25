@@ -2,6 +2,8 @@
 
 这是一个给 Codex Agent 使用的美股自选股自动化 skill。它会要求 Agent 使用 Followin MCP 作为主要数据源，围绕你的自选股和持仓状态，生成盘前跟踪、异动提醒、重大新闻同步和操作计划。
 
+Followin MCP 官网：[https://followin.io/zh-Hans/mcp](https://followin.io/zh-Hans/mcp)
+
 适合这些场景：
 
 - 每天盘前跟踪自选股
@@ -24,8 +26,6 @@ git clone https://github.com/will2025btc/followin-stock-automation-skill.git \
 ## 安装 Followin MCP
 
 这个 skill 依赖 Followin MCP。没有 Followin MCP 时，Agent 不应该假装拿到了 Followin 数据。
-
-Followin 官方 MCP 页面：[https://followin.io/zh-Hans/mcp](https://followin.io/zh-Hans/mcp)
 
 下面使用推荐的 Streamable HTTP 端点：
 
